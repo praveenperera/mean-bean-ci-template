@@ -94,6 +94,9 @@ jobs:
           # - i386-apple-ios
           # - x86_64-apple-ios
     steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@v2
+
       # Cache files between builds
       - name: Setup | Cache Cargo
         uses: actions/cache@v2
@@ -151,8 +154,7 @@ jobs:
           # WASM, off by default as most rust projects aren't compatible yet.
           # - wasm32-unknown-emscripten
           # Linux
-          - aarch64-apple-darwin
-          # - aarch64-unknown-linux-gnu
+          - aarch64-unknown-linux-gnu
           # - arm-unknown-linux-gnueabi
           # - armv7-unknown-linux-gnueabihf
           # - i686-unknown-linux-gnu
