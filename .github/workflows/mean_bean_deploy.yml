@@ -7,7 +7,7 @@ on:
 name: Mean Bean Deploy
 env:
   # TODO: Rename to your binary
-  BIN: <MY_BIN_NAME>
+  BIN: test
 
 jobs:
   # This job downloads and stores `cross` as an artifact, so that it can be
